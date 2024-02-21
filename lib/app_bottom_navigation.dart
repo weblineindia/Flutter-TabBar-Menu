@@ -11,12 +11,12 @@ class BottomNavigation extends StatelessWidget {
   Color backgroundColor;
   // ignore: sort_constructors_first
   BottomNavigation(
-      {this.arrBottomItems,
-      this.showSelectedLables,
-      this.showUnselectedLables,
-      this.backgroundColor,
-      this.color,
-      this.selectedColor});
+      {required this.arrBottomItems,
+      required this.showSelectedLables,
+      required this.showUnselectedLables,
+      required this.backgroundColor,
+      required this.color,
+      required this.selectedColor});
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,7 @@ class BottomNavigation extends StatelessWidget {
 BottomNavigationBarItem tabItem(String title, IconData icon) {
   return BottomNavigationBarItem(
     icon: Icon(icon),
-    title: Text(title),
+    label: title,
   );
 }
 

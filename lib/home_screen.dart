@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import 'app_bottom_navigation.dart';
@@ -53,11 +54,10 @@ class HomeScreen extends StatelessWidget {
                 return const Text('Fourth View',
                     style: TextStyle(color: Colors.white));
               } else {
-                return null;
+                return const SizedBox();
               }
             },
-          ),
-          brightness: Brightness.dark),
+          ), systemOverlayStyle: SystemUiOverlayStyle.light),
       body: Center(
         child: Consumer<BottomNavigatorProvider>(
           builder: (ctx, item, child) {
